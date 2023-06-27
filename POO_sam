@@ -1,0 +1,215 @@
+package poo;
+public class Poo {
+
+    
+    public static void main(String[] args) {
+        Usuario usuario1=new Usuario("Azcapotzalco", "Juan", "KAJS123456HDFLKJ01", 20, 5555, 2023);
+        System.out.println("Nombre: "+usuario1.getNombre());
+                usuario1.setNombre("Jose");
+        System.out.println("Direccion: "+usuario1.getDireccion());
+                usuario1.setDireccion("GAM");
+        System.out.println("CURP: "+usuario1.getCurp());
+                usuario1.setCurp("VAVS931215DHDG01");
+        System.out.println("Edad: "+usuario1.getCurp());
+                usuario1.setEdad(40);
+        System.out.println("Numero telefonico: "+usuario1.getNumeroTelefonico());
+                usuario1.setNumeroTelefonico(2356);
+        System.out.println("Año nacimiento: "+usuario1.getFechaNacimiento());
+                usuario1.setFechaNacimiento(3000);
+        
+        Usuario usuario2=new Usuario ();
+            usuario2.setNombre("Ana");
+        System.out.println("Nombre usuario 2: "+ usuario2.getNombre());
+        
+        Menor menor1= new Menor("Antonio", "Azcapotzalco", "Juanito perez", "KAJS123456HDFLKJ01", 20, 5555, 2023);
+            System.out.println("Tutor: "+menor1.getTutor());
+            
+        
+        
+    }
+    
+}
+
+
+
+
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package poo;
+
+/**
+ *
+ * @author PILARES
+ */
+public class Usuario {
+        
+    String direccion;
+    String nombre;
+    String curp;
+    int edad;
+    int numeroTelefonico;
+    int fechaNacimiento;
+    //método constructor:
+
+    public Usuario(String direccion, String nombre, String curp, int edad, int numeroTelefonico, int fechaNacimiento) {
+        this.direccion = direccion;
+        this.nombre = nombre;
+        this.curp = curp;
+        this.edad = edad;
+        this.numeroTelefonico = numeroTelefonico;
+        this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getCurp() {
+        return curp;
+    }
+
+    public void setCurp(String curp) {
+        this.curp = curp;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public int getNumeroTelefonico() {
+        return numeroTelefonico;
+    }
+
+    public void setNumeroTelefonico(int numeroTelefonico) {
+        this.numeroTelefonico = numeroTelefonico;
+    }
+
+    public int getFechaNacimiento() {
+        return fechaNacimiento;
+    }
+
+    public void setFechaNacimiento(int fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public Usuario() {
+    }
+    //sin atributos
+    
+    
+    public void mostrarDatos(){
+        System.out.println("Puedo mostrar datos.");
+        System.out.println("Puedo modificar datos.");
+        
+    }
+    
+}
+
+
+
+
+
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package poo;
+
+/**
+ *
+ * @author PILARES
+ */
+public class Menor extends Usuario{
+    String tutor;
+
+    public Menor(String tutor, String direccion, String nombre, String curp, int edad, int numeroTelefonico, int fechaNacimiento) {
+        super(direccion, nombre, curp, edad, numeroTelefonico, fechaNacimiento);
+        this.tutor = tutor;
+    }
+
+    public Menor(String tutor) {
+        this.tutor = tutor;
+    }
+    
+    
+
+    public Menor() {
+    }
+
+    public String getTutor() {
+        return tutor;
+    }
+
+    public void setTutor(String tutor) {
+        this.tutor = tutor;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getCurp() {
+        return curp;
+    }
+
+    public void setCurp(String curp) {
+        this.curp = curp;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public int getNumeroTelefonico() {
+        return numeroTelefonico;
+    }
+
+    public void setNumeroTelefonico(int numeroTelefonico) {
+        this.numeroTelefonico = numeroTelefonico;
+    }
+
+    public int getFechaNacimiento() {
+        return fechaNacimiento;
+    }
+
+    public void setFechaNacimiento(int fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
+    }
+    
+}
